@@ -115,7 +115,12 @@
       inView = entries[0].isIntersecting;
       if (inView) run();
     }, { threshold: 0.35 }).observe(root);
+    // SVG-Animationen (Strömungen, Lüfter) nur laufen lassen, solange das Haus sichtbar ist
+    new IntersectionObserver(function (entries) {
+      root.classList.toggle('is-inview', entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(root);
   }
 
+  if (!('IntersectionObserver' in w)) root.classList.add('is-inview');
   activate(order[0], false);
 })(window, document);

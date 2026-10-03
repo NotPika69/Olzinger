@@ -141,7 +141,7 @@
     var wasOpen = menuOpen;
     closeMenu();
     setTimeout(function () { scrollToEl(target); }, wasOpen ? 380 : 0);
-    if (history.replaceState) history.replaceState(null, '', id === '#top' ? location.pathname : id);
+    try { history.replaceState(null, '', id === '#top' ? location.pathname : id); } catch (err) { /* z. B. in Sandbox-Vorschauen */ }
   });
 
   /* ---------- Seitenwechsel mit Vorhang ---------- */
@@ -316,8 +316,9 @@
         { x: dir > 0 ? -unitWidth : 0, duration: unitWidth / 70, ease: 'none', repeat: -1 });
       tween.totalTime(tween.duration() * 500);
       var boost = { v: 1 };
-      ScrollTrigger.create({
+      var tapeST = ScrollTrigger.create({
         trigger: tape, start: 'top bottom', end: 'bottom top',
+        onToggle: function (self) { if (self.isActive) tween.resume(); else tween.pause(); },
         onUpdate: function (self) {
           var v = Math.min(Math.abs(self.getVelocity()) / 250, 7);
           var sign = self.direction === 1 ? 1 : -1;
@@ -331,6 +332,7 @@
           });
         }
       });
+      if (!tapeST.isActive) tween.pause();
       gsap.fromTo(tape, { xPercent: dir * -4 }, {
         xPercent: dir * 4, ease: 'none',
         scrollTrigger: { trigger: '.tapes', start: 'top bottom', end: 'bottom top', scrub: true }

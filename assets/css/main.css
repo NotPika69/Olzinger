@@ -825,6 +825,8 @@ address { font-style: normal; }
 .h-duct-flow { fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 6 10; --dash: -16; animation: dash 1.25s linear infinite; }
 .h-vent { fill: none; stroke: rgba(255, 255, 255, .72); stroke-width: 3; stroke-linecap: round; }
 
+.js .house__grid .house__svg * { animation-play-state: paused; }
+.js .house__grid.is-inview .house__svg * { animation-play-state: running; }
 .sys { transition: opacity .7s var(--ease); }
 .js .house__grid .sys { opacity: .26; }
 .js .house__grid .sys.is-on { opacity: 1; }

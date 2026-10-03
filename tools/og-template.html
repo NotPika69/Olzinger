@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>OG-Vorlage</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0B151E; }
+  .og { position: relative; width: 1200px; height: 630px; color: #F3EFE8; isolation: isolate; overflow: hidden; }
+  .og canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; }
+  .og::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(5,11,18,.7), rgba(5,11,18,.2) 55%, rgba(5,11,18,0)); }
+  .og__logo { position: absolute; left: 64px; top: 56px; }
+  .og__title { position: absolute; left: 60px; bottom: 120px; margin: 0; font-size: 132px; line-height: .86; font-weight: 600; font-stretch: 78%; letter-spacing: -.052em; }
+  .og__title span { display: block; }
+  .og__title i { display: inline-block; width: .15em; height: .15em; margin-left: .045em; border-radius: 50%; }
+  .og__sub { position: absolute; left: 64px; bottom: 58px; margin: 0; font-size: 26px; font-weight: 500; color: rgba(243,239,232,.86); }
+  .og__url { position: absolute; right: 64px; bottom: 58px; margin: 0; font-family: var(--font-mono); font-size: 18px; color: rgba(243,239,232,.7); }
+</style>
+</head>
+<body>
+<div class="og" id="og">
+  <canvas data-thermal></canvas>
+  <a class="logo og__logo" style="color:#F3EFE8">
+    <svg class="logo__mark" viewBox="0 0 40 40" style="width:52px;height:52px">
+      <defs><linearGradient id="g-logo" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2E9BEF"/><stop offset=".55" stop-color="#C2456B"/><stop offset="1" stop-color="#FF6A2B"/></linearGradient></defs>
+      <path d="M11.97 31.47A14 14 0 1 1 28.03 31.47" fill="none" stroke="url(#g-logo)" stroke-width="5.5" stroke-linecap="round"/>
+      <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
+    </svg>
+    <span class="logo__text"><span class="logo__word" style="font-size:28px">Olzinger</span><span class="logo__sub" style="font-size:14px">Haustechnik</span></span>
+  </a>
+  <h1 class="og__title">
+    <span>Wärme<i style="background:#FF6A2B;box-shadow:0 0 .28em rgba(255,106,43,.75)"></i></span>
+    <span>Wasser<i style="background:#2E9BEF;box-shadow:0 0 .28em rgba(46,155,239,.75)"></i></span>
+    <span>Luft<i style="background:#3CCFC0;box-shadow:0 0 .28em rgba(60,207,192,.7)"></i></span>
+  </h1>
+  <p class="og__sub">Heizung · Sanitär · Lüftung · Regenerativ – Ergolding bei Landshut, seit 1985</p>
+  <p class="og__url">olzinger.de</p>
+</div>
+<script src="../assets/js/thermal.js"></script>
+<script>
+  var t = OlzThermal.init(document.querySelector('[data-thermal]'), { hero: document.getElementById('og'), reduceMotion: false });
+  if (t) t.heatUp();
+</script>
+</body>
+</html>

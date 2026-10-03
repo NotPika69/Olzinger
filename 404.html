@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Seite nicht gefunden – Olzinger Haustechnik</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B151E">
+  <!-- Absolute Pfade, damit die Seite auch bei verschachtelten URLs korrekt lädt -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .e404 { min-height: 100vh; min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto; background: var(--ink); color: var(--paper); position: relative; overflow: hidden; isolation: isolate; }
+    .e404::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(45% 60% at 80% 30%, rgba(255,106,43,.35), rgba(138,35,80,.16) 50%, transparent 75%), radial-gradient(40% 55% at 10% 90%, rgba(46,155,239,.22), transparent 70%); }
+    .e404__top { display: flex; justify-content: space-between; align-items: center; padding: 22px var(--gutter); }
+    .e404__main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 80px); align-items: center; padding: 24px var(--gutter) 48px; max-width: calc(var(--container) + var(--gutter) * 2); margin: 0 auto; width: 100%; }
+    .e404__code { font-family: var(--font-mono); font-size: 14px; color: var(--text-dark-2); margin: 0 0 20px; }
+    .e404 .h1 { margin-bottom: 24px; }
+    .e404 .lead { color: var(--text-dark-2); margin-bottom: 32px; }
+    .e404__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .e404__art { width: 100%; max-width: 560px; justify-self: center; }
+    .e404__foot { padding: 20px var(--gutter); font-size: 14px; color: var(--text-dark-2); border-top: 1px solid var(--line-dark); }
+    .drip { animation: drip 1.8s cubic-bezier(.55, 0, .9, .45) infinite; }
+    .drip-2 { animation-delay: .9s; }
+    .splash { transform-box: fill-box; transform-origin: center; animation: splash 1.8s ease-out infinite; animation-delay: 1.05s; }
+    .splash-2 { animation-delay: 1.95s; }
+    @keyframes drip { 0% { transform: translateY(0) scale(.4); opacity: 0; } 12% { transform: translateY(0) scale(1); opacity: 1; } 62% { transform: translateY(104px); opacity: 1; } 64%, 100% { transform: translateY(104px); opacity: 0; } }
+    @keyframes splash { 0% { transform: scale(.3); opacity: 0; } 8% { opacity: 1; } 60%, 100% { transform: scale(2.6); opacity: 0; } }
+    @media (max-width: 860px) { .e404__main { grid-template-columns: minmax(0, 1fr); } .e404__art { order: -1; max-width: 420px; } }
+  </style>
+</head>
+<body>
+  <div class="e404">
+    <header class="e404__top">
+      <a class="logo" href="/" aria-label="Olzinger Haustechnik – zur Startseite">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs><linearGradient id="g-logo" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2E9BEF"/><stop offset=".55" stop-color="#C2456B"/><stop offset="1" stop-color="#FF6A2B"/></linearGradient></defs>
+          <path d="M11.97 31.47A14 14 0 1 1 28.03 31.47" fill="none" stroke="url(#g-logo)" stroke-width="5.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
+        </svg>
+        <span class="logo__text"><span class="logo__word">Olzinger</span><span class="logo__sub">Haustechnik</span></span>
+      </a>
+      <a class="btn btn--sm btn--warm" href="tel:+4987172617"><span class="btn__label">0871&nbsp;72617</span></a>
+    </header>
+
+    <main class="e404__main" id="main">
+      <div>
+        <p class="e404__code">Fehler 404</p>
+        <h1 class="h1">Kein Anschluss <em class="accent" style="color:var(--amber)">unter dieser Adresse.</em></h1>
+        <p class="lead">Diese Seite gibt es nicht – oder nicht mehr. Kein Grund zur Sorge: Wir bringen Sie zurück auf den richtigen Weg.</p>
+        <div class="e404__ctas">
+          <a class="btn btn--light" href="/">
+            <span class="btn__label">Zur Startseite</span>
+            <span class="btn__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="btn btn--ghost btn--ghost-light" href="/#kontakt"><span class="btn__label">Kontakt aufnehmen</span></a>
+        </div>
+      </div>
+
+      <svg class="e404__art" viewBox="0 0 520 300" aria-hidden="true">
+        <defs>
+          <linearGradient id="g-pipe" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2E9BEF"/><stop offset=".6" stop-color="#C2456B"/><stop offset="1" stop-color="#FF6A2B"/>
+          </linearGradient>
+          <linearGradient id="g-pipe2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FF6A2B"/><stop offset="1" stop-color="#FFB547"/>
+          </linearGradient>
+          <linearGradient id="g-shine" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M0 40V260" stroke="rgba(255,255,255,.14)" stroke-width="2" stroke-dasharray="4 8"/>
+        <rect x="14" y="70" width="20" height="76" rx="5" fill="#1B2C3B" stroke="rgba(255,255,255,.25)"/>
+        <path d="M34 86H312l-10 9 12 7-11 8 11 8-12 8 10 8H34Z" fill="url(#g-pipe)"/>
+        <path d="M34 86H312l-10 9H34Z" fill="url(#g-shine)"/>
+        <rect x="150" y="76" width="26" height="66" rx="7" fill="#0F1D29" stroke="rgba(255,255,255,.3)"/>
+        <rect x="236" y="76" width="26" height="66" rx="7" fill="#0F1D29" stroke="rgba(255,255,255,.3)"/>
+        <g transform="translate(398 112) rotate(14)">
+          <path d="M-8 -26h86v52H-8l10-8-12-8 11-8-11-8 12-7z" fill="url(#g-pipe2)" opacity=".9"/>
+        </g>
+        <text x="300" y="58" fill="rgba(255,255,255,.55)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.5">ANSCHLUSS FEHLT</text>
+        <path d="M296 64v14" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+        <g>
+          <path class="drip" d="M305 140c0 0 9 11 9 17a9 9 0 0 1-18 0c0-6 9-17 9-17z" fill="#8ED9FA"/>
+          <path class="drip drip-2" d="M305 140c0 0 9 11 9 17a9 9 0 0 1-18 0c0-6 9-17 9-17z" fill="#8ED9FA"/>
+        </g>
+        <ellipse cx="305" cy="270" rx="78" ry="10" fill="rgba(46,155,239,.22)"/>
+        <ellipse class="splash" cx="305" cy="270" rx="16" ry="4" fill="none" stroke="#8ED9FA" stroke-width="1.6"/>
+        <ellipse class="splash splash-2" cx="305" cy="270" rx="16" ry="4" fill="none" stroke="#8ED9FA" stroke-width="1.6"/>
+      </svg>
+    </main>
+
+    <footer class="e404__foot">© Olzinger GmbH · Ahornstraße 112 · 84030 Ergolding · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></footer>
+  </div>
+</body>
+</html>
